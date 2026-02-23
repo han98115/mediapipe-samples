@@ -16,6 +16,30 @@ enum class Model(
     val topK: Int,
     val topP: Float,
 ) {
+    GEMMA_GPU_int4(
+      path = "/data/local/tmp/gemma-2b-it-gpu-int4.bin",
+      url = "",
+      licenseUrl = "",
+      needsAuth = true,
+      preferredBackend = Backend.GPU,
+      thinking = true,
+      //uiState = GemmaUiState(),
+      temperature = 0.75f,
+      topK = 40,
+      topP = 0.95f
+    ),
+    GEMMA_GPU_int8(
+      path = "/data/local/tmp/gemma-2b-it-gpu-int8.bin",
+      url = "",
+      licenseUrl = "",
+      needsAuth = true,
+      preferredBackend = Backend.GPU,
+      thinking = true,
+      //uiState = GemmaUiState(),
+      temperature = 0.75f,
+      topK = 40,
+      topP = 0.95f
+    ),
     GEMMA3_1B_IT_CPU(
         path = "/data/local/tmp/Gemma3-1B-IT_multi-prefill-seq_q8_ekv2048.task",
         url = "https://huggingface.co/litert-community/Gemma3-1B-IT/resolve/main/Gemma3-1B-IT_multi-prefill-seq_q8_ekv2048.task",
